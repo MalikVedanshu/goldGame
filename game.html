@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Grid Game </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @font-face {
+        font-family: infobox;
+        src: url("font/unstov.ttf");
+    }
+    .infobox {
+            text-align: center; 
+            color: rgb(9, 44, 87);
+            text-transform: uppercase;
+            font-family: infobox;
+            width: fit-content;
+            margin-bottom: 5px;
+            margin: auto;
+        }
+</style>
+<body id="gamescreen">
+    <div class="infobox" style="border:4px solid black; border-radius: 15px; background-color: rgb(216, 195, 71)">
+        <h1><span id="player"></span></h1>
+        <h2>Scrore : <span id="score">0</span></h2>
+        <h2 style="color:rgb(232, 208, 70); background-color: rgb(41, 30, 4);">Mine the gold and avoid bombs</h2>
+        <button style="width: 40%; margin-bottom: 5px;" onclick="openLeaderBoard()">LeaderBoard</button>
+    </div>
+    <section>
+        <table class="container" id="myTable"></table>
+    </section>
+</body>
+<script src="script.js"></script>
+<script>
+    document.getElementById("player").innerText = document.URL.split("=")[1].toUpperCase();
+    
+    function openLeaderBoard() {
+        window.open('leaderboard.html','leaderboard','width=1300,height = 1100');
+    }
+</script>
+
+
+</html>
